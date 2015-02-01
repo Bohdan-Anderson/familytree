@@ -1,0 +1,12 @@
+{% extends "tree/base.html" %}
+
+{% block pageID%}loginpage{% endblock %}
+
+{% block content %}
+
+<ul>
+{% for person in data.people %}
+	<li><a href="/person/{{person.pk}}">{{person}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
