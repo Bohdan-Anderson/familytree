@@ -14,6 +14,8 @@ class Picture(models.Model):
 
 	notes = models.TextField(blank=True,null=True)
 
+
+
 class Event(models.Model):
 	includes = models.ManyToManyField("Person",blank=True,null=True)
 	picture = models.ManyToManyField(Picture,blank=True,null=True)

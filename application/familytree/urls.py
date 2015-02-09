@@ -11,6 +11,6 @@ urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'registration/login.html'}),    
     url(r'^$','tree.views.home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
